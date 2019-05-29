@@ -1,0 +1,30 @@
+service:
+  name: sls-typescript-template # RENAME ME
+
+plugins:
+  - serverless-plugin-typescript
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  tracing:
+    lambda: true
+
+#custom:
+  #PG_CONNECTION_STRING: ${ssm:/dev/pg/api-key~true}
+
+#package:
+#  exclude:
+#    - node_modules/**
+
+functions:
+  hello:
+    handler: src/index.hello
+    events:
+      #- sns: ${self:provider.stage}-${self:service.name}-notification
+      - http:
+          method: get
+          path: hello
+    #environment:
+      #PG_CONNECTION_STRING: ${self:custom.PG_CONNECTION_STRING}

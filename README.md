@@ -1,0 +1,1 @@
+## sls-typescript-template

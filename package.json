@@ -1,0 +1,16 @@
+{
+  "name": "sls-typescript-template",
+  "version": "0.0.0",
+  "license": "UNLICENSED",
+  "main": "src/index.js",
+  "types": "src",
+  "scripts": {},
+  "dependencies": {
+    "@types/aws-lambda": "^8.10.24",
+    "typescript": "^3.4.5"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.463.0",
+    "serverless-plugin-typescript": "^1.1.7"
+  }
+}
