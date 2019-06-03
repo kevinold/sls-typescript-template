@@ -3,6 +3,7 @@ service:
 
 plugins:
   - serverless-plugin-typescript
+  - serverless-pseudo-parameters
 
 provider:
   name: aws
